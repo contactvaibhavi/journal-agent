@@ -4,13 +4,13 @@ from sqlalchemy.sql import text
 from sqlalchemy_utils import database_exists, create_database
 from pgvector.sqlalchemy import Vector
 from dotenv import load_dotenv
-import urllib
+import urllib.parse
 import os
 
 load_dotenv()
 
 POSTGRES_USERNAME = os.getenv('POSTGRES_USERNAME')
-POSTGRES_PASSWORD = os.getenv('POSTGRES_PASSWORD')
+POSTGRES_PASSWORD = os.getenv('POSTGRES_PASSWORD', '')
 POSTGRES_HOST = os.getenv('POSTGRES_HOST', 'localhost')
 POSTGRES_PORT = os.getenv('POSTGRES_PORT', '5432')
 DATABASE_NAME = os.getenv('DATABASE_NAME', 'fastapi_rag_db')

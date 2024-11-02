@@ -1,0 +1,4 @@
+.env
+HLD.png
+__pycache__/*
+.DS_Store

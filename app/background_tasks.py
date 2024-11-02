@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from db import FileChunk
+from app.db import FileChunk
 import nltk
 from nltk.tokenize import sent_tokenize
 from openai import OpenAI
